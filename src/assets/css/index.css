@@ -4,7 +4,7 @@
 
 body{
   margin: 0;
-  font-family: Inter, sans-serif;
+  font-family: Karla, sans-serif;
   background-color: rgba(11, 36, 52, 1);
   padding: 35px;
   justify-content: center;
@@ -20,7 +20,7 @@ main{
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 36px;
   min-width: 700px;
   min-height: 700px;
