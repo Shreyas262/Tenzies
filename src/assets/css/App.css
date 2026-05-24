@@ -1,0 +1,125 @@
+main{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 36px;
+  min-width: 700px;
+  min-height: 700px;
+  background-color: rgba(245, 245, 245, 1);
+}
+
+.title-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  font-weight: 700;
+  font-size: 3.5rem;
+  letter-spacing: -3%;
+  vertical-align: middle;
+  line-height: 100%;
+  padding: 0;
+  color: rgba(43, 40, 58, 1);
+}
+
+p{
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: -3%;
+  line-height: 100%;
+  text-align: center;
+  padding: 0;
+  transform: translateY(-30px);
+  color: rgba(74, 78, 116, 1);
+}
+
+.die-container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.die{
+  height: 70px;
+  width: 70px;
+  font-weight: 700;
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.rolling {
+  animation: roll 0.5s ease;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: rotate(90deg) scale(1.2);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(0.9);
+  }
+
+  75% {
+    transform: rotate(270deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.roll-btn{
+  height: 65px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  border: none;
+  border-radius: 10px;
+  white-space: nowrap;
+  padding: 16px 24px;
+  letter-spacing: 3%;
+  color: White;
+  background-color: rgba(59, 130, 246, 1);
+  box-shadow: 0px 3.2px 7.68px 0px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+.roll-btn:focus{
+  outline: 2px solid rgba(59, 130, 246, 1);
+  outline-offset: 2px;
+}
